@@ -14,6 +14,7 @@ body{
     text-align: right;
     justify-content: right;
     size: 100vw 10vh;
+    display: flex;
 }
 .navbar a {
     float: left;
@@ -37,5 +38,10 @@ footer {
     text-align: center;
     justify-content: center;
     size: 100vw 10vh;
-
+    display: block;
+    color: #f2f2f2;
+}
+footer a {
+    color: #f2f2f2;
+    text-decoration: none;
 }
