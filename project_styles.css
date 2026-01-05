@@ -1,15 +1,16 @@
-body {
+ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #edc030;
-    border: 1px;
-    height: 80%;
+    min-height: 85;
     width: 100%;
-    position: fixed;
-    top: 5vh;
-}
+    position: static;
+    background: linear-gradient(rgba(237, 224, 48, 0.9), rgba(237, 224, 48, 0.8)), url('images/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    }
 .navbar {
     background-color: #bf0d3e;
     overflow: hidden;
@@ -58,10 +59,48 @@ footer a {
 }
 h1 {
     text-align: center;
+    size: 100rem;
 }
 #selected {
     position: fixed;
     top: 5vh;
+    bottom: 90vh;
     height: 85%;
     width: 100%;
+}
+.content {
+    position: fixed;
+    top: 5vh;
+    height: 85%;
+    width: 100%;
+}
+.events {
+    width: 20%;
+    height: 70%;
+    padding: 1rem;
+    margin: 0.5rem;
+    border: 10%;
+    background-color: #ffdc69;
+    text-align: left;
+    justify-content: flex-start;
+    float: left;
+    border-radius: 20%;
+    position: relative;
+    overflow: visible;
+}
+.events:hover {
+    background-color: #cdb030;
+}
+.events-images {
+    width: 75%;
+    height: 75%;
+    padding: 5%;
+}
+p {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    padding: 5px;
+    margin: 5px;
+    border: 5px;
 }

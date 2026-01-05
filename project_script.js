@@ -13,3 +13,15 @@ function login() {
 function references() {
      document.getElementById("selected").innerHTML = '<iframe class="content" src="/subpages/references.html"></iframe>';
 }
+function Alab() {
+     document.getElementById("selected").innerHTML = '<iframe class="content" src="/subpages/events-subpages/alab.html"></iframe>';
+}
+function Familyday() {
+     document.getElementById("selected").innerHTML = '<iframe class="content" src="/subpages/events-subpages/familyday.html"></iframe>';
+}
+function Midyearfair() {
+     document.getElementById("selected").innerHTML = '<iframe class="content" src="/subpages/events-subpages/midyearfair.html"></iframe>';
+}
+function Intramurals() {
+     document.getElementById("selected").innerHTML = '<iframe class="content" src="/subpages/events-subpages/intramurals.html"></iframe>';
+}

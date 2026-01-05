@@ -8,6 +8,14 @@ This hopes to eventually make student and administrator life easier, especially 
 
 > *This is inspired by the campaign of the L.U.M.E.N. Partylist for the S.Y. 2025 - 2026 Batch Council Elections.*
 
+# Title
+
+The title for this project would be... *drumrolls*
+
+> The Database
+
+This is a direct reference to the purpose of this website, where it is used as a database for different information, alongside a place to store potential future tools.
+
 <br><br>
 
 # The Front End: HTML Segment
