@@ -1,9 +1,9 @@
-body {
+ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    min-height: 85vh;
+    min-height: 85;
     width: 100%;
     position: static;
     background: linear-gradient(rgba(237, 224, 48, 0.9), rgba(237, 224, 48, 0.8)), url('images/background.png');
@@ -31,7 +31,7 @@ body {
     padding: 14px 16px;
     text-decoration: none;
 }
-.navbar a:hover {
+.navbar a:hover{
     float: left;
     display: block;
     color: #f2f2f2;
@@ -45,6 +45,7 @@ footer {
     text-decoration-line: none;
     text-align: center;
     justify-content: center;
+    size: 100vw 10vh;
     display: block;
     color: #f2f2f2;
     position: fixed;
@@ -56,17 +57,16 @@ footer a {
     color: #f2f2f2;
     text-decoration: none;
 }
+h1 {
+    text-align: center;
+    size: 100rem;
+}
 #selected {
     position: fixed;
     top: 5vh;
     bottom: 90vh;
     height: 85%;
     width: 100%;
-}
-/* potential area of mistake, everything before works*/
-h1 {
-    text-align: center;
-    font-size: 100rem;
 }
 .content {
     position: fixed;
@@ -79,12 +79,12 @@ h1 {
     height: 70%;
     padding: 1rem;
     margin: 0.5rem;
-    border: 10px;
+    border: 10%;
     background-color: #ffdc69;
     text-align: left;
     justify-content: flex-start;
     float: left;
-    border-radius: 20px;
+    border-radius: 20%;
     position: relative;
     overflow: visible;
 }
