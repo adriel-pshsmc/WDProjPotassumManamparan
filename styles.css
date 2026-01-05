@@ -45,7 +45,6 @@ footer {
     text-decoration-line: none;
     text-align: center;
     justify-content: center;
-    size: 100vw 10vh;
     display: block;
     color: #f2f2f2;
     position: fixed;
@@ -59,7 +58,7 @@ footer a {
 }
 h1 {
     text-align: center;
-    size: 100rem;
+    font-size: 100rem;
 }
 #selected {
     position: fixed;
