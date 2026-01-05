@@ -56,3 +56,12 @@ footer a {
     color: #f2f2f2;
     text-decoration: none;
 }
+h1 {
+    text-align: center;
+}
+#selected {
+    position: fixed;
+    top: 5vh;
+    height: 85%;
+    width: 100%;
+}
