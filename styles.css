@@ -31,7 +31,7 @@ body {
     padding: 14px 16px;
     text-decoration: none;
 }
-.navbar a :hover{
+.navbar a:hover{
     float: left;
     display: block;
     color: #f2f2f2;
@@ -79,12 +79,12 @@ h1 {
     height: 70%;
     padding: 1rem;
     margin: 0.5rem;
-    border: 10%;
+    border: 10px;
     background-color: #ffdc69;
     text-align: left;
     justify-content: flex-start;
     float: left;
-    border-radius: 20%;
+    border-radius: 20px;
     position: relative;
     overflow: visible;
 }
