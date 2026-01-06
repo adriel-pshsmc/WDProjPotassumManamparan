@@ -75,3 +75,18 @@ Wireframe Plan: https://www.canva.com/design/DAG3KzcYek4/Ks7b5aqk-aSFpk-J2qvOKQ/
 
 ~~~Repository: GitHub Repository: https://github.com/adriel-pshsmc/WDProjPotassumManamparan~~~
 
+
+
+
+# Q3 Proposal Update
+
+## Final Title
+
+## Features (3 min)
+    > works on phones & laptops
+
+## details (project specific)
+    > we'll use html forms for...
+    > we'll show the data we collected on the...
+
+## definition of done
