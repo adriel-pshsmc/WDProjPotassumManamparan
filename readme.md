@@ -77,16 +77,19 @@ Wireframe Plan: https://www.canva.com/design/DAG3KzcYek4/Ks7b5aqk-aSFpk-J2qvOKQ/
 
 
 
-
 # Q3 Proposal Update
 
-## Final Title
+## Final Title: Scientia Unified (Latin for "Unified Knowlewdge")
 
 ## Features (3 min)
-    > works on phones & laptops
+    > Works on phones & laptops, alongside tablets.
+    > Is able to change between two different themes.
+    > Tallies data collected from the user for the benefits of everyone.
 
 ## details (project specific)
-    > we'll use html forms for...
-    > we'll show the data we collected on the...
+    > We'll use html forms for the collection of information from a person and the creation of a unique identification cache for the user.
+    > We'll show the data we collected on the administrator side and an area where data will be stored with public consent.
+    > We'll aim for this website to be able to provide help to users for multiple functions in  everyday life.
 
-## definition of done
+## Definition of done: 
+> Something that increases productivity levels to the user, returns as highly satisfactory, is efficient and functional.
