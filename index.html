@@ -1,31 +1,47 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-    <!--
-        NOTE: Recommended <head> items to add (copy/paste and adjust values):
-        1) <meta charset="utf-8">                      -- put first for correct text encoding
-        2) <meta name="viewport" content="width=device-width, initial-scale=1"> -- mobile responsiveness
-        3) <title>Page title</title>
-        4) <meta name="description" content="Short description for SEO/social">
-        5) <link rel="stylesheet" href="/styles.css">   -- ensure correct path; use ../styles.css in subpages/
-        6) <link rel="icon" href="/images/favicon.png"> -- or ../images/favicon.png from subpages/
-        7) Social: og:title, og:description, og:image, twitter:card for nicer previews
-        8) <meta name="theme-color" content="#bf0d3e">    -- optional
-        9) <script src="/script.js" defer></script>      -- use defer or place before </body>; use ../script.js in subpages/
-
-        Common gotchas:
-        - Relative paths in subpages (files inside `subpages/`) need `../` to reach project root.
-        - Avoid multiple, conflicting CSS files; edit the one your pages actually link.
-        - Use DevTools Network to check for 404s when CSS/JS doesn't load.
-    -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>The Database</title>
+    <title>Scientia Unitia</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
-</head>
-<body>
+    <script src="script.js" defer></script>
+    </head>
+    <body>
+    <div id="mySidenav" class="sidenav">
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <div id="main">
+    <header>
+        <nav class="horizontal-navigation-bar">
+            <button id="sidenavToggle" class="sidenav-toggle" onclick="toggleNav()" aria-label="Toggle menu">☰</button>
+            <div class="website-logos">
+                <img class="logo" src="images/temp_favicon.png" alt="logo">
+                <a class="title" href="index.html">Scientia Unitia</a>
+            </div>
+            <ul class="navigation-buttons">
+                <li><a class="navigation-button" href="index.html">Home</a></li>
+                <li><a class="navigation-button" href="subpages/document.html">Document</a></li>
+                <li><a class="navigation-button" href="subpages/signin.html">Sign In</a></li>
+                <li><a class="navigation-button" href="subpages/events.html">Events</a></li>
+                <li><a class="navigation-button" href="subpages/references.html">References</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Welcome to Scientia Unitia</h2>
+            <p>The future of a unified storage of knowledge and powerful tools.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Manamparan, Adriel Lenard C. </p>
+    </footer>
+    </div>
 
 </body>
-<footer>
-
-</footer>
+</html>
