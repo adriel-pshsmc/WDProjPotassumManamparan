@@ -48,7 +48,7 @@ body {
   height: 8vh;
   width: auto;
   object-fit: contain;
-  border-radius: 6px;
+  border-radius: 50%;
 }
 
 .title {
@@ -86,7 +86,7 @@ body {
 }
 
 main {
-  max-height: calc(100vh - 10vh);
+  max-height: 90vh;
   overflow-y: auto;
   padding: 1rem;
 }
@@ -98,7 +98,7 @@ main {
   z-index: 1100;
   top: 0;
   left: 0;
-  background-color: #111;
+  background-color: rgb(150, 0, 0);
   overflow-x: hidden;
   padding-top: 60px;
   transition: 0.5s;
@@ -108,13 +108,13 @@ main {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-  color: #818181;
+  color: #e0e0e0;
   display: block;
   transition: 0.3s;
 }
 
 .sidenav a:hover {
-  color: #f1f1f1;
+  color: #ffffff;
 }
 
 .sidenav .closebtn {
@@ -142,11 +142,11 @@ main {
 }
 
 .sidenav-toggle:focus {
-  outline: 2px solid rgba(255,255,255,0.15);
+  outline: 2px solid rgba(187,25,0,0.15);
 }
 
 #main {
-  transition: margin-left 0.5s;
+  transition: margin-left 1s;
   padding: 20px;
 }
 
@@ -160,7 +160,9 @@ main {
   }
 }
 
-header { width: 100%; }
+header { 
+  width: 100%; 
+}
 
 footer {
   position: fixed;
@@ -175,4 +177,39 @@ footer {
   align-items: center;
   justify-content: center;
   z-index: 900;
+}
+
+.sidenav-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  border-bottom: 0.5vh solid rgba(255, 255, 255, 0.2);
+}
+
+.sidenav-toggle-inside, .sidenav-close {
+  background: none;
+  border: none;
+  color: rgb(255, 255, 255);
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.sidenav-logo {
+  width: 25%;
+  height: 25%;
+  border-radius: 50%;
+}
+
+.sidenav-title {
+  font-size: 1.25em;
+  font-weight: bolder;
+  white-space: nowrap;
+  flex-grow: 1;
+  color: rgb(255, 255, 255)
+}
+
+.sidenav-close {
+  font-size: 28px;
+  line-height: 1;
 }
