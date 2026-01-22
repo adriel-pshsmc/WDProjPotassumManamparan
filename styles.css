@@ -201,6 +201,8 @@ footer {
   height: 25%;
   border-radius: 50%;
   max-width: 100%;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 .sidenav-title {
@@ -215,3 +217,13 @@ footer {
   font-size: 28px;
   line-height: 1;
 }
+
+.sidenav-logo-link {
+  display: flex;
+  width: auto;
+  height: auto;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+}
+
