@@ -12,7 +12,7 @@
 
         <div class="sidenav-top">
             <button class="sidenav-toggle-inside" onclick="toggleNav()">☰</button>
-            <img src="images/temp_favicon.png" alt="Scientia Unitia Logo" class="sidenav-logo">
+            <a href="index.html"><img src="images/temp_favicon.png" alt="Scientia Unitia Logo" class="sidenav-logo"></a>
             <span href="index.html" class="sidenav-title">Scientia Unitia</span>
         </div>
 
@@ -28,9 +28,9 @@
     <header>
         <nav class="horizontal-navigation-bar">
             <button id="sidenavToggle" class="sidenav-toggle" onclick="toggleNav()" aria-label="Toggle menu">☰</button>
-            <div class="website-logos">
-                <img class="logo" src="images/temp_favicon.png" alt="logo">
-                <a class="title" href="index.html">Scientia Unitia</a>
+            <div class="website-logos" id="website-logos">
+                <a href="index.html"><img class="logo" id="navigation-bar-logo" src="images/temp_favicon.png" alt="logo"></a>
+                <a class="title" id="navigation-bar-title" href="index.html">Scientia Unitia</a>
             </div>
             <ul class="navigation-buttons">
                 <li><a class="navigation-button" href="index.html">Home</a></li>

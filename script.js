@@ -1,28 +1,60 @@
-// Minimal script: active-link highlighting + sidenav helpers
 document.addEventListener('DOMContentLoaded', function () {
-  var path = window.location.pathname;
-  var page = path.substring(path.lastIndexOf('/') + 1) || 'index.html';
-  var links = document.querySelectorAll('.navigation-button');
+  var path = window.location.pathname, page = path.substring(path.lastIndexOf('/') + 1) || 'index.html', links = document.querySelectorAll('.navigation-button');
+  
   for (var i = 0; i < links.length; i++) {
-    var a = links[i];
-    var href = a.getAttribute('href') || '';
-    var hrefPage = href.substring(href.lastIndexOf('/') + 1);
-    if (hrefPage === page) a.classList.add('active');
+    var a = links[i], href = a.getAttribute('href') || '', hrefPage = href.substring(href.lastIndexOf('/') + 1);
+    
+    if (hrefPage === page) {
+      a.classList.add('active');
+    }
   }
 });
 
 function openNav() {
-  var nav = document.getElementById('mySidenav');
-  var main = document.getElementById('main');
-  if (nav) nav.style.width = '250px';
-  if (main) main.style.marginLeft = '250px';
+  var nav = document.getElementById('mySidenav'), main = document.getElementById('main');
+  var navigationBarLogo = document.getElementById("navigation-bar-logo"), navigationBarTitle = document.getElementById("navigation-bar-title");
+  
+  if (nav) {
+    nav.style.width = '250px';
+  }
+
+  if (main) {
+    main.style.marginLeft = '250px';
+  }
+
+  /* does not work presently
+  if (navigationBarLogo) {
+    navigationBarLogo.style.display = "none";
+  }
+
+  if (navigationBarTitle) {
+    navigationBarTitle.style.display = "none";
+  }
+  */
 }
 
 function closeNav() {
   var nav = document.getElementById('mySidenav');
   var main = document.getElementById('main');
-  if (nav) nav.style.width = '0';
-  if (main) main.style.marginLeft = '0';
+  var navigationBarLogo = document.getElementById("navigation-bar-logo"), navigationBarTitle = document.getElementById("navigation-bar-title");
+
+  if (nav) {
+    nav.style.width = '0';
+  }
+
+  if (main) {
+    main.style.marginLeft = '0';
+  }
+  
+  /* does not work presently
+  if (navigationBarLogo) {
+    navigationBarLogo.style.display = "flex";
+  }
+
+  if (navigationBarTitle) {
+    navigationBarTitle.style.display = "flex";
+  }
+  */
 }
 
 window.openNav = openNav;
