@@ -1,0 +1,223 @@
+{
+  "batchlist": [
+{
+  "section_name": "Beryllium",
+  "section_symbol": "Be",
+  "students": [
+    {
+      "number": 1,
+      "first_name": "Nivander Quorlen",
+      "last_name": "Crespath",
+      "email": "b29ncrespath@shsp.edu.ph",
+      "code": "Be01"
+    },
+    {
+      "number": 2,
+      "first_name": "Nerivon Altharic",
+      "last_name": "Avendor",
+      "email": "b29navendor@shsp.edu.ph",
+      "code": "Be02"
+    },
+    {
+      "number": 3,
+      "first_name": "Jorvian Meltrick",
+      "last_name": "Casperon",
+      "email": "b29jcasperon@shsp.edu.ph",
+      "code": "Be03"
+    },
+    {
+      "number": 4,
+      "first_name": "Marquis Trevion",
+      "last_name": "Candlerton",
+      "email": "b29mcandlerton@shsp.edu.ph",
+      "code": "Be04"
+    },
+    {
+      "number": 5,
+      "first_name": "Sophrina Velithan",
+      "last_name": "Castelborne",
+      "email": "b29scastelborne@shsp.edu.ph",
+      "code": "Be05"
+    },
+    {
+      "number": 6,
+      "first_name": "Eilian Chrysver",
+      "last_name": "Belmorand",
+      "email": "b29ebelmorand@shsp.edu.ph",
+      "code": "Be06"
+    },
+    {
+      "number": 7,
+      "first_name": "Lucien Vardros",
+      "last_name": "Cablerton",
+      "email": "b29lcablerton@shsp.edu.ph",
+      "code": "Be07"
+    },
+    {
+      "number": 8,
+      "first_name": "Hiravian Odelmar",
+      "last_name": "Comistra",
+      "email": "b29hcomistra@shsp.edu.ph",
+      "code": "Be08"
+    },
+    {
+      "number": 9,
+      "first_name": "Malvian Geres",
+      "last_name": "Cruviston",
+      "email": "b29mcruviston@shsp.edu.ph",
+      "code": "Be09"
+    },
+    {
+      "number": 10,
+      "first_name": "Hadrick Tomen",
+      "last_name": "Dumelborn",
+      "email": "b29hdumelborn@shsp.edu.ph",
+      "code": "Be10"
+    },
+    {
+      "number": 11,
+      "first_name": "Lianver Esmond",
+      "last_name": "Gabsiroth",
+      "email": "b29lgabsiroth@shsp.edu.ph",
+      "code": "Be11"
+    },
+    {
+      "number": 12,
+      "first_name": "Sandrel Anverith",
+      "last_name": "Gombrasti",
+      "email": "b29sgombrasti@shsp.edu.ph",
+      "code": "Be12"
+    },
+    {
+      "number": 13,
+      "first_name": "Karlven Miquel",
+      "last_name": "Gorstani",
+      "email": "b29kgorstani@shsp.edu.ph",
+      "code": "Be13"
+    },
+    {
+      "number": 14,
+      "first_name": "Kylar Somethiel",
+      "last_name": "Gorviston",
+      "email": "b29kgorviston@shsp.edu.ph",
+      "code": "Be14"
+    },
+    {
+      "number": 15,
+      "first_name": "Amirel Lucovian",
+      "last_name": "Katiborn",
+      "email": "b29akatiborn@shsp.edu.ph",
+      "code": "Be15"
+    },
+    {
+      "number": 16,
+      "first_name": "Brilwen Tifara",
+      "last_name": "Lansborton",
+      "email": "b29blansborton@shsp.edu.ph",
+      "code": "Be16"
+    },
+    {
+      "number": 17,
+      "first_name": "Fioren Savrilla",
+      "last_name": "Laundermont",
+      "email": "b29flaundermont@shsp.edu.ph",
+      "code": "Be17"
+    },
+    {
+      "number": 18,
+      "first_name": "Cladrian Marvosha",
+      "last_name": "Maceterlyn",
+      "email": "b29cmaceterlyn@shsp.edu.ph",
+      "code": "Be18"
+    },
+    {
+      "number": 19,
+      "first_name": "Juvanel Lorric",
+      "last_name": "Marnesept",
+      "email": "b29jmarnesept@shsp.edu.ph",
+      "code": "Be19"
+    },
+    {
+      "number": 20,
+      "first_name": "Leivah Montraine",
+      "last_name": "Menberson",
+      "email": "b29lmenberson@shsp.edu.ph",
+      "code": "Be20"
+    },
+    {
+      "number": 21,
+      "first_name": "Estrelia Morvane",
+      "last_name": "Ongvistra",
+      "email": "b29eongvistra@shsp.edu.ph",
+      "code": "Be21"
+    },
+    {
+      "number": 22,
+      "first_name": "Yundar Phelvion",
+      "last_name": "Panestril",
+      "email": "b29ypanestril@shsp.edu.ph",
+      "code": "Be22"
+    },
+    {
+      "number": 23,
+      "first_name": "Ashvielle Jonara",
+      "last_name": "Quilestorm",
+      "email": "b29aquilestorm@shsp.edu.ph",
+      "code": "Be23"
+    },
+    {
+      "number": 24,
+      "first_name": "Karvion Alesther",
+      "last_name": "Drelosant",
+      "email": "b29kdrelosant@shsp.edu.ph",
+      "code": "Be24"
+    },
+    {
+      "number": 25,
+      "first_name": "Liamjore Shaviston",
+      "last_name": "Sarmetrion",
+      "email": "b29lsarmetrion@shsp.edu.ph",
+      "code": "Be25"
+    },
+    {
+      "number": 26,
+      "first_name": "Benvictor Jersha",
+      "last_name": "Sermanthel",
+      "email": "b29bsermanthel@shsp.edu.ph",
+      "code": "Be26"
+    },
+    {
+      "number": 27,
+      "first_name": "Carvion Milther",
+      "last_name": "Sialbront",
+      "email": "b29csialbront@shsp.edu.ph",
+      "code": "Be27"
+    },
+    {
+      "number": 28,
+      "first_name": "Beatriz Yrmelle",
+      "last_name": "Tamberston",
+      "email": "b29btamberston@shsp.edu.ph",
+      "code": "Be28"
+    },
+    {
+      "number": 29,
+      "first_name": "Krithean Villamont",
+      "last_name": "Droselwyn",
+      "email": "b29kdroselwyn@shsp.edu.ph",
+      "code": "Be29"
+    },
+    {
+      "number": 30,
+      "first_name": "Rafarelle Ynastor",
+      "last_name": "Yaverrick",
+      "email": "b29ryaverrick@shsp.edu.ph",
+      "code": "Be30"
+    }
+  ]
+}
+  ]
+}
+
+
+ 
