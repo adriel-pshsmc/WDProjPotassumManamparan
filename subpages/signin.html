@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Scientia Unitia</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scientia Unitia</title>
   <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" type="image/png" href="../images/temp_favicon.png">
   <script src="../script.js" defer></script>
 </head>
 <body>
@@ -43,7 +44,28 @@
     <h1>Sign In</h1>
   </header>
   <main>
-    <p>This is a placeholder for the Sign In page. Add your form here.</p>
+    <section class="signin-container">
+      <form class="short-form" action="#" method="post" aria-label="Sign in form">
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required placeholder="you@example.com">
+        </div>
+
+        <div class="form-row">
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" required placeholder="Password">
+        </div>
+
+        <div class="form-row inline">
+          <label><input type="checkbox" name="remember"> Remember me</label>
+        </div>
+
+        <div class="form-row">
+          <button type="submit" class="btn">Sign in</button>
+        </div>
+      </form>
+      <p class="small"><a href="#">Forgot password?</a> • <a href="document.html">Register</a></p>
+    </section>
   </main>
   <footer>
     <p>&copy; 2026 Manamparan, Adriel Lenard C.</p>

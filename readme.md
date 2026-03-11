@@ -92,4 +92,4 @@ Wireframe Plan: https://www.canva.com/design/DAG3KzcYek4/Ks7b5aqk-aSFpk-J2qvOKQ/
     > We'll aim for this website to be able to provide help to users for multiple functions in  everyday life.
 
 ## Definition of done: 
-> Something that increases productivity levels to the user, returns as highly satisfactory, is efficient and functional.
+> Something th3at increases productivity levels to the user, returns as highly satisfactory, is efficient and functional.

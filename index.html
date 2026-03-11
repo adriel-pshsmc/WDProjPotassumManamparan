@@ -1,56 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Scientia Unitia</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Scientia Unitia</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" type="image/png" href="images/temp_favicon.png">
+        <script src="script.js" defer></script>
     </head>
     <body>
-    <div id="mySidenav" class="sidenav">
+        <div id="mySidenav" class="sidenav">
 
-        <div class="sidenav-top">
-            <button class="sidenav-toggle-inside" onclick="toggleNav()">☰</button>
-            <a href="index.html" class="sidenav-logo-link"><img src="images/temp_favicon.png" alt="Scientia Unitia Logo" class="sidenav-logo"></a>
-            <span href="index.html" class="sidenav-title">Scientia Unitia</span>
+            <div class="sidenav-top">
+                <button class="sidenav-toggle-inside" onclick="toggleNav()">☰</button>
+                <a href="index.html" class="sidenav-logo-link"><img src="images/temp_favicon.png" alt="Scientia Unitia Logo"
+                        class="sidenav-logo"></a>
+                <span href="index.html" class="sidenav-title">Scientia Unitia</span>
+            </div>
+
+            <a href="index.html">Home</a>
+            <a href="subpages/document.html">Document</a>
+            <a href="subpages/events.html">Events</a>
+            <a href="subpages/references.html">References</a>
+            <a href="subpages/signin.html">Sign In</a>
         </div>
 
-        <a href="index.html">Home</a>
-        <a href="subpages/document.html">Document</a>
-        <a href="subpages/events.html">Events</a>
-        <a href="subpages/references.html">References</a>
-        <a href="subpages/signin.html">Sign In</a>
-    </div>
 
+        <div id="main">
+            <header>
+                <nav class="horizontal-navigation-bar">
+                    <button id="sidenavToggle" class="sidenav-toggle" onclick="toggleNav()"
+                        aria-label="Toggle menu">☰</button>
+                    <div class="website-logos" id="website-logos">
+                        <a href="index.html"><img class="logo" id="navigation-bar-logo" src="images/temp_favicon.png"
+                                alt="logo"></a>
+                        <a class="title" id="navigation-bar-title" href="index.html">Scientia Unitia</a>
+                    </div>
+                    <ul class="navigation-buttons">
+                        <li><a class="navigation-button" href="index.html">Home</a></li>
+                        <li><a class="navigation-button" href="subpages/document.html">Document</a></li>
+                        <li><a class="navigation-button" href="subpages/signin.html">Sign In</a></li>
+                        <li><a class="navigation-button" href="subpages/events.html">Events</a></li>
+                        <li><a class="navigation-button" href="subpages/references.html">References</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <section>
+                    <h2>Welcome to Scientia Unitia</h2>
+                    <p>The future of a unified storage of knowledge and powerful tools.</p>
+                </section>
+            </main>
+            <footer>
+                <p>&copy; 2026 Manamparan, Adriel Lenard C. </p>
+            </footer>
+        </div>
 
-    <div id="main">
-    <header>
-        <nav class="horizontal-navigation-bar">
-            <button id="sidenavToggle" class="sidenav-toggle" onclick="toggleNav()" aria-label="Toggle menu">☰</button>
-            <div class="website-logos" id="website-logos">
-                <a href="index.html"><img class="logo" id="navigation-bar-logo" src="images/temp_favicon.png" alt="logo"></a>
-                <a class="title" id="navigation-bar-title" href="index.html">Scientia Unitia</a>
-            </div>
-            <ul class="navigation-buttons">
-                <li><a class="navigation-button" href="index.html">Home</a></li>
-                <li><a class="navigation-button" href="subpages/document.html">Document</a></li>
-                <li><a class="navigation-button" href="subpages/signin.html">Sign In</a></li>
-                <li><a class="navigation-button" href="subpages/events.html">Events</a></li>
-                <li><a class="navigation-button" href="subpages/references.html">References</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h2>Welcome to Scientia Unitia</h2>
-            <p>The future of a unified storage of knowledge and powerful tools.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2026 Manamparan, Adriel Lenard C. </p>
-    </footer>
-    </div>
-
-</body>
+    </body>
 </html>

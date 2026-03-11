@@ -4,16 +4,19 @@
   padding: 0;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   max-width: 100vw;
+  color-scheme: light dark;
+
 }
 
 body {
   padding-top: 10vh;
   padding-bottom: 10vh;
   font-family: 'Times New Roman', Times, serif;
-  background: linear-gradient(rgba(255,195,0,0.85), rgba(150,100,0,0.85)), url('images/background.jpg');
+  background: linear-gradient(rgba(255, 195, 0, 0.85), rgba(150, 100, 0, 0.85)), url('images/background.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -28,7 +31,7 @@ body {
   padding: 0 1rem;
   height: 10vh;
   min-height: 50px;
-  background: rgb(187,25,0); 
+  background: light-dark(rgb(187, 25, 0));
   color: #fff;
   width: 100vw;
   position: fixed;
@@ -78,11 +81,11 @@ body {
 }
 
 .navigation-button:hover {
-  background: rgba(255,255,255,0.12);
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .navigation-button.active {
-  outline: 2px solid rgba(255,255,255,0.18);
+  outline: 2px solid rgba(255, 255, 255, 0.18);
 }
 
 main {
@@ -142,7 +145,7 @@ main {
 }
 
 .sidenav-toggle:focus {
-  outline: 2px solid rgba(187,25,0,0.15);
+  outline: 2px solid rgba(187, 25, 0, 0.15);
 }
 
 #main {
@@ -160,8 +163,8 @@ main {
   }
 }
 
-header { 
-  width: 100%; 
+header {
+  width: 100%;
 }
 
 footer {
@@ -171,7 +174,7 @@ footer {
   width: 100vw;
   height: 10vh;
   min-height: 50px;
-  background: rgb(187,25,0);
+  background: rgb(187, 25, 0);
   color: #fff;
   display: flex;
   align-items: center;
@@ -188,7 +191,8 @@ footer {
   border-bottom: 0.5vh solid rgba(255, 255, 255, 0.2);
 }
 
-.sidenav-toggle-inside, .sidenav-close {
+.sidenav-toggle-inside,
+.sidenav-close {
   background: none;
   border: none;
   color: rgb(255, 255, 255);
@@ -229,4 +233,3 @@ footer {
   align-items: center;
   justify-content: center;
 }
-
