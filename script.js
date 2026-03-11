@@ -8,6 +8,57 @@ document.addEventListener('DOMContentLoaded', function () {
       a.classList.add('active');
     }
   }
+
+  var form = document.querySelector('.short-form');
+  if (form) {
+    try {
+      var saved = localStorage.getItem('su_signin');
+      if (saved) {
+        var data = JSON.parse(saved);
+        if (data.email) {
+          var email = document.getElementById('email'); 
+          if (email){email.value = data.email};
+        }
+        if (data.password) {
+          var password = document.getElementById('password'); 
+          if (password){password.value = data.password};
+        }
+        if (typeof data.remember !== 'undefined') {
+          var remember = form.querySelector('input[type="checkbox"][name="remember"]'); if (remember) remember.checked = !!data.remember;
+        }
+      }
+    } catch (error) {
+      console.warn('Could not parse saved signin data', error);
+    }
+
+    // Handle submit: save to localStorage
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      var email = (document.getElementById('email') || {}).value || '';
+      var password = (document.getElementById('password') || {}).value || '';
+      var remember = !!(form.querySelector('input[type="checkbox"][name="remember"]') || {}).checked;
+
+      var payload = {
+        email: email,
+        // store password only if remember checked; otherwise remove it
+        password: remember ? password : '',
+        remember: remember,
+        savedAt: new Date().toISOString()
+      };
+
+      try {
+        localStorage.setItem('su_signin', JSON.stringify(payload));
+        var submitBtn = form.querySelector('button[type="submit"]');
+        if (submitBtn) {
+          var orig = submitBtn.textContent;
+          submitBtn.textContent = 'Saved ✓';
+          setTimeout(function () { submitBtn.textContent = orig; }, 1200);
+        }
+      } catch (error) {
+        console.error('Could not save signin data', error);
+      }
+    });
+  }
 });
 
 function openNav() {
@@ -21,16 +72,6 @@ function openNav() {
   if (main) {
     main.style.marginLeft = '250px';
   }
-
-  /* does not work presently
-  if (navigationBarLogo) {
-    navigationBarLogo.style.display = "none";
-  }
-
-  if (navigationBarTitle) {
-    navigationBarTitle.style.display = "none";
-  }
-  */
 }
 
 function closeNav() {
@@ -45,16 +86,6 @@ function closeNav() {
   if (main) {
     main.style.marginLeft = '0';
   }
-  
-  /* does not work presently
-  if (navigationBarLogo) {
-    navigationBarLogo.style.display = "flex";
-  }
-
-  if (navigationBarTitle) {
-    navigationBarTitle.style.display = "flex";
-  }
-  */
 }
 
 window.openNav = openNav;
