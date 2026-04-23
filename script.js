@@ -11,52 +11,78 @@ document.addEventListener('DOMContentLoaded', function () {
 
   var form = document.querySelector('.short-form');
   if (form) {
-    try {
-      var saved = localStorage.getItem('su_signin');
-      if (saved) {
-        var data = JSON.parse(saved);
-        if (data.email) {
-          var email = document.getElementById('email'); 
-          if (email){email.value = data.email};
-        }
-        if (data.password) {
-          var password = document.getElementById('password'); 
-          if (password){password.value = data.password};
-        }
-        if (typeof data.remember !== 'undefined') {
-          var remember = form.querySelector('input[type="checkbox"][name="remember"]'); if (remember) remember.checked = !!data.remember;
-        }
-      }
-    } catch (error) {
-      console.warn('Could not parse saved signin data', error);
-    }
-
-    // Handle submit: save to localStorage
+    // Handle submit: send credentials to server-side login endpoint
     form.addEventListener('submit', function (event) {
       event.preventDefault();
       var email = (document.getElementById('email') || {}).value || '';
       var password = (document.getElementById('password') || {}).value || '';
-      var remember = !!(form.querySelector('input[type="checkbox"][name="remember"]') || {}).checked;
 
-      var payload = {
-        email: email,
-        // store password only if remember checked; otherwise remove it
-        password: remember ? password : '',
-        remember: remember,
-        savedAt: new Date().toISOString()
-      };
-
-      try {
-        localStorage.setItem('su_signin', JSON.stringify(payload));
-        var submitBtn = form.querySelector('button[type="submit"]');
-        if (submitBtn) {
-          var orig = submitBtn.textContent;
-          submitBtn.textContent = 'Saved ✓';
-          setTimeout(function () { submitBtn.textContent = orig; }, 1200);
-        }
-      } catch (error) {
-        console.error('Could not save signin data', error);
+      var submitBtn = form.querySelector('button[type="submit"]');
+      if (submitBtn) {
+        var orig = submitBtn.textContent;
+        submitBtn.textContent = 'Signing in...';
+        submitBtn.disabled = true;
       }
+
+      fetch('/api/auth/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: email, password: password })
+      }).then(function (r) {
+        return r.json().then(function (json) { return { ok: r.ok, status: r.status, body: json }; });
+      }).then(function (resp) {
+        if (!resp.ok) {
+          alert(resp.body && resp.body.message ? resp.body.message : 'Login failed');
+          if (submitBtn) { submitBtn.textContent = orig; submitBtn.disabled = false; }
+          return;
+        }
+        // Success: redirect to profile page
+        window.location.href = 'profile.html';
+      }).catch(function (err) {
+        console.error('Login error', err);
+        alert('Login error, check console');
+        if (submitBtn) { submitBtn.textContent = orig; submitBtn.disabled = false; }
+      });
+    });
+  }
+
+  // Register form handler (on register page)
+  var regForm = document.querySelector('.register-form');
+  if (regForm) {
+    regForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+      var username = (document.getElementById('reg-username') || {}).value || '';
+      var email = (document.getElementById('reg-email') || {}).value || '';
+      var password = (document.getElementById('reg-password') || {}).value || '';
+      var password2 = (document.getElementById('reg-password2') || {}).value || '';
+
+      if (password !== password2) {
+        alert('Passwords do not match');
+        return;
+      }
+
+      var submitBtn = regForm.querySelector('button[type="submit"]');
+      if (submitBtn) { var orig = submitBtn.textContent; submitBtn.textContent = 'Creating…'; submitBtn.disabled = true; }
+
+      fetch('/api/auth/signup', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username: username, email: email, password: password })
+      }).then(function (r) {
+        return r.json().then(function (json) { return { ok: r.ok, status: r.status, body: json }; });
+      }).then(function (resp) {
+        if (!resp.ok) {
+          alert((resp.body && resp.body.message) || 'Registration failed');
+          if (submitBtn) { submitBtn.textContent = orig; submitBtn.disabled = false; }
+          return;
+        }
+        // success — redirect to profile
+        window.location.href = 'profile.html';
+      }).catch(function (err) {
+        console.error('Signup error', err);
+        alert('Signup error, check console');
+        if (submitBtn) { submitBtn.textContent = orig; submitBtn.disabled = false; }
+      });
     });
   }
 });

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Your Profile — Scientia Unitia</title>
+        <link rel="stylesheet" href="../styles.css">
+        <link rel="icon" type="image/png" href="../images/temp_favicon.png">
+        <script src="../script.js" defer></script>
+        <style>
+            .profile-card {
+                max-width: 640px;
+                margin: 2rem auto;
+                padding: 1.2rem;
+                border: 1px solid #dddddd;
+                border-radius: 6px;
+                background: #ffffff;
+            }
+
+            .profile-row {
+                margin: 0.6rem 0;
+            }
+
+            .muted {
+                color: #666;
+                font-size: 0.95rem;
+            }
+
+            .btn-quiet {
+                background: #eee;
+                border: 1px solid #ccc;
+                padding: 0.5rem 0.8rem;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="mySidenav" class="sidenav">
+            <div class="sidenav-top">
+                <button class="sidenav-toggle-inside" onclick="toggleNav()">☰</button>
+                <a href="../index.html" class="sidenav-logo-link">
+                    <img src="images/temp_favicon.png" alt="Scientia Unitia Logo" class="sidenav-logo">
+                </a>
+                <span href="../index.html" class="sidenav-title">Scientia Unitia</span>
+            </div>
+
+            <a href="../index.html">Home</a>
+            <a href="document.html">Document</a>
+            <a href="events.html">Events</a>
+            <a href="references.html">References</a>
+            <a href="signin.html">Sign In</a>
+            <a href="profile.html">Profile</a>
+        </div>
+
+        <div id="main">
+            <header>
+                <nav class="horizontal-navigation-bar">
+                    <button id="sidenavToggle" class="sidenav-toggle" aria-label="Toggle menu" onclick="toggleNav()">☰</button>
+                    <div class="website-logos">
+                        <a href="../index.html"><img class="logo" src="../images/temp_favicon.png" alt="logo"></a>
+                        <a class="title" href="../index.html">Scientia Unitia</a>
+                    </div>
+                    <ul class="navigation-buttons">
+                        <li><a class="navigation-button" href="../index.html">Home</a></li>
+                        <li><a class="navigation-button" href="document.html">Document</a></li>
+                        <li><a class="navigation-button" href="signin.html">Sign In</a></li>
+                        <li><a class="navigation-button" href="events.html">Events</a></li>
+                        <li><a class="navigation-button" href="references.html">References</a></li>
+                        <li><a class="navigation-button" href="#">Placeholder</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <main>
+                <section class="profile-card" id="profileCard">
+                    <h2 id="profileTitle">Profile</h2>
+                    <div id="profileContent">
+                        <p class="muted">Loading profile…</p>
+                    </div>
+                    <div style="margin-top:1rem;">
+                        <button id="signOutBtn" class="btn-quiet">Sign out</button>
+                    </div>
+                </section>
+            </main>
+
+            <footer>
+                <p>&copy; 2026 Manamparan, Adriel Lenard C.</p>
+            </footer>
+        </div>
+
+        <script>
+            // Small profile demo: read the localStorage key written by the signin form
+            (function () {
+                var content = document.getElementById('profileContent');
+                var title = document.getElementById('profileTitle');
+
+                // Request server for authenticated user info
+                fetch('/api/auth/me', { credentials: 'same-origin' }).then(function (r) {
+                    return r.json().then(function (json) { return { ok: r.ok, body: json }; });
+                }).then(function (resp) {
+                    if (!resp.ok || !resp.body || !resp.body.authenticated) {
+                        title.textContent = 'Not signed in';
+                        content.innerHTML = '<p class="muted">You are not signed in. <a href="signin.html">Sign in</a> to view your profile.</p>';
+                        return;
+                    }
+                    var user = resp.body.user || {};
+                    var email = user.email || '(no email)';
+                    var html = '';
+                    html += '<div class="profile-row"><strong>Username</strong><div class="muted">' + escapeHtml(user.username || '') + '</div></div>';
+                    html += '<div class="profile-row"><strong>Email</strong><div class="muted">' + escapeHtml(email) + '</div></div>';
+                    html += '<div class="profile-row"><strong>Role</strong><div class="muted">' + escapeHtml(user.role || '') + '</div></div>';
+                    html += '<div class="profile-row"><small class="muted">Authenticated via server session.</small></div>';
+                    content.innerHTML = html;
+                }).catch(function (err) {
+                    console.error('Profile fetch error', err);
+                    title.textContent = 'Not signed in';
+                    content.innerHTML = '<p class="muted">Could not fetch profile (server may be down). <a href="signin.html">Sign in</a></p>';
+                });
+
+                var btn = document.getElementById('signOutBtn');
+                if (btn) btn.addEventListener('click', function () {
+                    try {
+                        localStorage.removeItem('su_signin');
+                    } catch (e) { /* ignore */ }
+
+                    // Redirect back to home
+                    window.location.href = '../index.html';
+                });
+
+                function escapeHtml(str) {
+                    return String(str)
+                        .replace(/&/g, '&amp;')
+                        .replace(/</g, '&lt;')
+                        .replace(/>/g, '&gt;')
+                        .replace(/"/g, '&quot;')
+                        .replace(/'/g, '&#39;');
+                }
+            })();
+        </script>
+    </body>
+</html>
