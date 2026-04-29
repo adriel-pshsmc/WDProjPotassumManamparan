@@ -121,12 +121,22 @@
 
                 var btn = document.getElementById('signOutBtn');
                 if (btn) btn.addEventListener('click', function () {
-                    try {
-                        localStorage.removeItem('su_signin');
-                    } catch (e) { /* ignore */ }
-
-                    // Redirect back to home
-                    window.location.href = '../index.html';
+                    // Call server logout endpoint to destroy session, then redirect to sign-in page
+                    fetch('/api/auth/logout', {
+                        method: 'POST',
+                        credentials: 'same-origin',
+                        headers: { 'Content-Type': 'application/json' }
+                    }).then(function (r) {
+                        return r.json().catch(function () { return { success: true }; });
+                    }).then(function () {
+                        try { localStorage.removeItem('su_signin'); } catch (e) { /* ignore */ }
+                        // Redirect to the sign-in page
+                        window.location.href = 'signin.html';
+                    }).catch(function (err) {
+                        console.error('Logout error', err);
+                        // fallback redirect
+                        window.location.href = 'signin.html';
+                    });
                 });
 
                 function escapeHtml(str) {

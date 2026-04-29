@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       fetch('/api/auth/login', {
         method: 'POST',
+        credentials: 'same-origin',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: email, password: password })
       }).then(function (r) {
@@ -46,7 +47,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Register form handler (on register page)
   var regForm = document.querySelector('.register-form');
   if (regForm) {
     regForm.addEventListener('submit', function (event) {
@@ -64,10 +64,18 @@ document.addEventListener('DOMContentLoaded', function () {
       var submitBtn = regForm.querySelector('button[type="submit"]');
       if (submitBtn) { var orig = submitBtn.textContent; submitBtn.textContent = 'Creating…'; submitBtn.disabled = true; }
 
+      // Collect all inputs from the register form and send as JSON
+      var formData = Array.from(regForm.querySelectorAll('input')).reduce(function (acc, input) {
+        if (!input.name) return acc;
+        acc[input.name] = input.value;
+        return acc;
+      }, {});
+
       fetch('/api/auth/signup', {
         method: 'POST',
+        credentials: 'same-origin',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ username: username, email: email, password: password })
+        body: JSON.stringify(formData)
       }).then(function (r) {
         return r.json().then(function (json) { return { ok: r.ok, status: r.status, body: json }; });
       }).then(function (resp) {
@@ -76,7 +84,6 @@ document.addEventListener('DOMContentLoaded', function () {
           if (submitBtn) { submitBtn.textContent = orig; submitBtn.disabled = false; }
           return;
         }
-        // success — redirect to profile
         window.location.href = 'profile.html';
       }).catch(function (err) {
         console.error('Signup error', err);

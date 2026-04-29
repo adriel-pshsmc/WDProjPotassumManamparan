@@ -26,31 +26,31 @@ The Website has the following parts:
 
 1. Home Page:
 
-    This is where visitors will be welcomed. It will include the main data to be shown to the students, such as video clips regarding the batch, links to different segments of the batch, and other data.
+  This is where visitors will be welcomed. It will include the main data to be shown to the students, such as video clips regarding the batch, links to different segments of the batch, and other data.
 
 2. Navigation Bar:
 
-    This is where links to general segments of the website can be accessed. Sites that can accessed through this page would be the likes of: Sign-in, Events, Reviewers (ARCHERS), Forms, Home (for other pages), and other parts that I will think of soon.
+  This is where links to general segments of the website can be accessed. Sites that can accessed through this page would be the likes of: Sign-in, Events, Reviewers (ARCHERS), Forms, Home (for other pages), and other parts that I will think of soon.
 
 3. Side Bar:
 
-    This is where more specific pages can be accessed, such as subcategories of the main websites. (e.g. Events -> ALAB 2026 / Family Day 2026-28 / Mid-S.Year Fair 2028, or Reviewers -> STEM/HUMMS)
+  This is where more specific pages can be accessed, such as subcategories of the main websites. (e.g. Events -> ALAB 2026 / Family Day 2026-28 / Mid-S.Year Fair 2028, or Reviewers -> STEM/HUMMS)
 
 4. Sign-in Page:
 
-    This area is where the students will be allowed to log into the website to access batch-specific functions, such as administrator access to the website to allow for editing, etc.
+  This area is where the students will be allowed to log into the website to access batch-specific functions, such as administrator access to the website to allow for editing, etc.
 
 5. Events:
 
-    This area is where different information regarding events held by B2029 can be found, which may be utilized for events such as ALAB 2026, future Family Days, future Intramurals, Mid-School Year Fair 2028, and other significant events.
+  This area is where different information regarding events held by B2029 can be found, which may be utilized for events such as ALAB 2026, future Family Days, future Intramurals, Mid-School Year Fair 2028, and other significant events.
 
 6. Documents
 
-    These will include possible editors for all documents needed by the students to be filed, such as S.I.P. forms, Club forms, SDO forms, DSA forms, and others.
+  These will include possible editors for all documents needed by the students to be filed, such as S.I.P. forms, Club forms, SDO forms, DSA forms, and others.
 
 # Beautification: CSS Segment
 
-    The CSS Segment will allow for the website to be organized into different segments, with additional aesthetics for each of these segments.
+  The CSS Segment will allow for the website to be organized into different segments, with additional aesthetics for each of these segments.
 
 # The Back End: JavaScript Segment
 
@@ -82,14 +82,15 @@ Wireframe Plan: https://www.canva.com/design/DAG3KzcYek4/Ks7b5aqk-aSFpk-J2qvOKQ/
 ## Final Title: Scientia Unified (Latin for "Unified Knowlewdge")
 
 ## Features (3 min)
-    > Works on phones & laptops, alongside tablets.
-    > Is able to change between two different themes.
-    > Tallies data collected from the user for the benefits of everyone.
+  > Works on phones & laptops, alongside tablets.
+  > Is able to change between two different themes.
+  > Tallies data collected from the user for the benefits of everyone.
 
 ## details (project specific)
-    > We'll use html forms for the collection of information from a person and the creation of a unique identification cache for the user.
-    > We'll show the data we collected on the administrator side and an area where data will be stored with public consent.
-    > We'll aim for this website to be able to provide help to users for multiple functions in  everyday life.
+  > We'll use html forms for the collection of information from a person and the creation of a unique identification cache for the user.
+  > We'll show the data we collected on the administrator side and an area where data will be stored with public consent.
+  > We'll aim for this website to be able to provide help to users for multiple functions in  everyday life.
 
 ## Definition of done: 
 > Something th3at increases productivity levels to the user, returns as highly satisfactory, is efficient and functional.
+
